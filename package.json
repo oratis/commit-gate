@@ -1,0 +1,65 @@
+{
+  "name": "@oratis/commit-gate",
+  "version": "1.0.0",
+  "description": "Zero-dependency, config-driven Conventional Commits linter. One tiny CLI for husky commit-msg hooks and CI, plus a typed programmatic API.",
+  "keywords": [
+    "commit",
+    "commitlint",
+    "conventional-commits",
+    "commit-message",
+    "git-hooks",
+    "husky",
+    "commit-msg",
+    "lint",
+    "cli",
+    "zero-dependency",
+    "typescript"
+  ],
+  "author": "oratis (https://github.com/oratis)",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "commit-gate": "./dist/cli.cjs"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oratis/commit-gate.git"
+  },
+  "homepage": "https://github.com/oratis/commit-gate#readme",
+  "bugs": {
+    "url": "https://github.com/oratis/commit-gate/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
